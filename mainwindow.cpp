@@ -28,7 +28,7 @@ void MainWindow::atualizarEstatisticas()
 void MainWindow::inserirPacienteNaTabela(Paciente paciente, int row)
 {
     ui->tbl_data->setItem(row,0,new QTableWidgetItem(paciente.getNome()));
-    //ui->tbl_data->setItem(row,1,new QTableWidgetItem(QString::number(paciente.getMedia())));
+    ui->tbl_data->setItem(row,1,new QTableWidgetItem(QString::number(paciente.getPrioridade())));
     //ui->tbl_data->setItem(row,2,new QTableWidgetItem(paciente.getStatus()));
 }
 
@@ -80,7 +80,7 @@ void MainWindow::on_btn_insert_clicked()
     if(ui->le_nameInput->text().size() != 0 && ui->le_avgInput->text().size() != 0){
         Paciente paciente;
         paciente.setNome(ui->le_nameInput->text());
-
+        paciente.setPrioridade(ui->le_avgInput->text().toInt());
         int qnt_row = ui->tbl_data->rowCount();
         ui->tbl_data->insertRow(qnt_row);
 
