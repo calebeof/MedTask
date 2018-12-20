@@ -21,3 +21,8 @@ void Atender::ordenarPorNome(){
 int Atender::size(){
     return lista.size();
 }
+
+Paciente Atender::operator[](int i)
+{
+    return lista[i];
+}

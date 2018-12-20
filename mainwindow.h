@@ -41,6 +41,8 @@ private slots:
 
     void on_selection_bar_activated(const QString &arg1);
 
+    void on_comboBox_activated(const QString &arg1);
+
 private:
     Ui::MainWindow *ui;
     void inserirPacienteNaTabela(Paciente Paciente, int row);

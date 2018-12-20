@@ -113,6 +113,7 @@ void MainWindow::on_btn_insert_clicked()
             ui->tbl_data->insertRow(qnt_row);
             ui->le_nameInput->clear();
             atender.inserirPaciente(paciente);
+            ui->comboPac->addItem(paciente.getNome());
             inserirPacienteNaTabela(paciente, qnt_row);
         }
         else if (msg=="Médico"){
@@ -122,6 +123,7 @@ void MainWindow::on_btn_insert_clicked()
             lista_de_medicos.inserirMedico(medico);
             ui->tbl_data->insertRow(qnt_row);
             ui->le_nameInput->clear();
+            ui->comboMed->addItem(medico.getNome());
             inserirMedicoNaTabela(medico, qnt_row);
         }
         else{
@@ -136,6 +138,7 @@ void MainWindow::on_btn_NameSort_clicked()
     ui->tbl_data->clearContents();
 
     lista_de_medicos.ordenarPorNome();
+    atender.ordenarPorNome();
     for(int i = 0; i<lista_de_medicos.size(); i++){
         inserirMedicoNaTabela(lista_de_medicos[i], i);
     }
@@ -144,8 +147,9 @@ void MainWindow::on_btn_NameSort_clicked()
 void MainWindow::on_btn_GradeSort_clicked()
 {
     ui->tbl_data->clearContents();
-    for(int i = 0; i<medico.size();i++){
-        inserirPacienteNaTabela(medico[i],i);
+    atender.ordenarPorPrioridade();
+    for(int i = 0; i<atender.size();i++){
+        inserirPacienteNaTabela(atender[i],i);
     }
 }
 

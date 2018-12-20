@@ -17,6 +17,7 @@ public:
     void ordenarPorNome();
     void ordenarPorPrioridade();
     int size();
+    Paciente operator[] (int i);
 };
 
 #endif // ATENDER_H
