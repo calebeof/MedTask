@@ -45,20 +45,6 @@
         </item>
        </layout>
       </item>
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_2">
-        <item>
-         <widget class="QLabel" name="label_2">
-          <property name="text">
-           <string>Prioridade</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLineEdit" name="le_avgInput"/>
-        </item>
-       </layout>
-      </item>
       <item alignment="Qt::AlignTop">
        <widget class="QComboBox" name="selection_bar">
         <item>
@@ -158,7 +144,7 @@
         <item>
          <widget class="QPushButton" name="btn_GradeSort">
           <property name="text">
-           <string>Ordenar por Média</string>
+           <string>Ordenar por Prioridade</string>
           </property>
          </widget>
         </item>
@@ -275,7 +261,7 @@
      <x>0</x>
      <y>0</y>
      <width>472</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuArquivo">
