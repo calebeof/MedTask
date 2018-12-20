@@ -29,13 +29,15 @@ SOURCES += \
         mainwindow.cpp \
     paciente.cpp \
     medico.cpp \
-    atender.cpp
+    atender.cpp \
+    medicos.cpp
 
 HEADERS += \
         mainwindow.h \
     paciente.h \
     medico.h \
-    atender.h
+    atender.h \
+    medicos.h
 
 FORMS += \
         mainwindow.ui

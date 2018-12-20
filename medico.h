@@ -8,15 +8,14 @@
 
 #include "paciente.h"
 
-class Medico : public QObject
+class Medico
 {
-    Q_OBJECT
 private:
     QVector<Paciente> atendidos;
     QString nome;
 
 public:
-    explicit Medico(QObject *parent = nullptr);
+    Medico();
     void inserirPaciente(const Paciente a);
     float mediaDaTurma();
     float maiorNota();
@@ -31,9 +30,6 @@ public:
     QString getNome() const;
     void setNome(const QString &value);
 
-signals:
-
-public slots:
 };
 
 #endif // MEDICO_H

@@ -10,7 +10,8 @@ void Medico::setNome(const QString &value)
     nome = value;
 }
 
-Medico::Medico(QObject *parent) : QObject(parent)
+
+Medico::Medico()
 {
 
 }

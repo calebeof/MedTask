@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QFileDialog>
+#include <QComboBox>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -29,9 +30,14 @@ void MainWindow::inserirPacienteNaTabela(Paciente paciente, int row)
 {
     ui->tbl_data->setItem(row,0,new QTableWidgetItem(paciente.getNome()));
     ui->tbl_data->setItem(row,1,new QTableWidgetItem(QString::number(paciente.getPrioridade())));
-    //ui->tbl_data->setItem(row,2,new QTableWidgetItem(paciente.getStatus()));
+    ui->tbl_data->setItem(row,2,new QTableWidgetItem("Paciente"));
 }
 
+void MainWindow::inserirMedicoNaTabela(Medico medico, int row){
+    ui->tbl_data->setItem(row,0,new QTableWidgetItem(medico.getNome()));
+    ui->tbl_data->setItem(row,1,new QTableWidgetItem("--"));
+    ui->tbl_data->setItem(row,2,new QTableWidgetItem("Médico"));
+}
 bool MainWindow::carregar()
 {
     qDebug() << "carregar\n";
@@ -78,18 +84,39 @@ void MainWindow::on_btn_insert_clicked()
 {
 
     if(ui->le_nameInput->text().size() != 0 && ui->le_avgInput->text().size() != 0){
-        Paciente paciente;
-        paciente.setNome(ui->le_nameInput->text());
-        paciente.setPrioridade(ui->le_avgInput->text().toInt());
+        QString aux_nome = ui->le_nameInput->text();
+        //int aux_prioridade = ui->le_avgInput->text().toInt();
+        QString aux_prioridade = ui->selection_bar2->currentText();
         int qnt_row = ui->tbl_data->rowCount();
+        QString msg = ui->selection_bar->currentText();
         ui->tbl_data->insertRow(qnt_row);
-
-        inserirPacienteNaTabela(paciente, qnt_row);
-
         ui->le_nameInput->clear();
         ui->le_avgInput->clear();
 
-        medico.inserirPaciente(paciente);
+        if(msg == "Paciente"){
+            qDebug() << "Paciente selecionado!" << endl;
+            Paciente paciente;
+            paciente.setNome(aux_nome);
+            if(aux_prioridade=="Prioridade alta")
+                paciente.setPrioridade(0);
+            else if (aux_prioridade=="Prioridade média")
+                paciente.setPrioridade(1);
+            else
+                paciente.setPrioridade(2);
+            atender.inserirPaciente(paciente);
+            inserirPacienteNaTabela(paciente, qnt_row);
+        }
+
+        else if (msg=="Médico"){
+            qDebug() << "Médico selecionado!" << endl;
+            Medico medico;
+            medico.setNome(aux_nome);
+            lista_de_medicos.inserirMedico(medico);
+            inserirMedicoNaTabela(medico, qnt_row);
+        }
+        else{
+            qDebug() << "Nenhum selecionado!" << endl;
+        }
         atualizarEstatisticas();
     }
 }
@@ -110,4 +137,13 @@ void MainWindow::on_btn_GradeSort_clicked()
     for(int i = 0; i<medico.size();i++){
         inserirPacienteNaTabela(medico[i],i);
     }
+}
+
+void MainWindow::on_selection_bar_activated(const QString &arg1)
+{
+    qDebug() << arg1;
+    if(arg1=="Paciente")
+        ui->selection_bar2->setEnabled(1);
+    else
+        ui->selection_bar2->setEnabled(0);
 }

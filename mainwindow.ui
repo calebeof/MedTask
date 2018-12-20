@@ -50,7 +50,7 @@
         <item>
          <widget class="QLabel" name="label_2">
           <property name="text">
-           <string>Média</string>
+           <string>Prioridade</string>
           </property>
          </widget>
         </item>
@@ -58,6 +58,52 @@
          <widget class="QLineEdit" name="le_avgInput"/>
         </item>
        </layout>
+      </item>
+      <item alignment="Qt::AlignTop">
+       <widget class="QComboBox" name="selection_bar">
+        <item>
+         <property name="text">
+          <string>Selecionar tipo...</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Médico</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Paciente</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="selection_bar2">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <item>
+         <property name="text">
+          <string>Selecione a prioridade...</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Prioridade alta</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Prioridade média</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Prioridade baixa</string>
+         </property>
+        </item>
+       </widget>
       </item>
       <item>
        <widget class="QPushButton" name="btn_insert">
@@ -90,12 +136,12 @@
         </column>
         <column>
          <property name="text">
-          <string>Média</string>
+          <string>Prioridade</string>
          </property>
         </column>
         <column>
          <property name="text">
-          <string>Situação</string>
+          <string>Tipo</string>
          </property>
         </column>
        </widget>
