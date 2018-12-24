@@ -3,11 +3,11 @@
 
 ![ícone](figuras/icon.png)
 
-O MedTask tem a intenção de tornar a realização de tarefas de agendamento mais prática e fácil em hospitais. 
+O MedTask tem a intenção de tornar a realização de tarefas de atendimento mais prática e fácil em hospitais. 
 
 ### Como adquirir o MedTask?
 
-Se utilizas Linux ou Mac, basta fazer o download do repositório e executar o arquivo MedTask.pro com o QT Creator. Já para Windows, há a possibilidade de fazer a instalação rápida e prática com o MedTaskInstaller, bastando apenas baixar o arquivo .zip presente neste repositório e extrai-lo no seu pc. Em seguida, apenas necessitarás de passar por alguns passos simples que demorarão segundos para, em seguida, poder utilizar o MedTask normalmente. 
+Se utilizas Linux ou Mac, basta fazer o download do repositório e executar o arquivo MedTask.pro com o QT Creator. Já para Windows, há a possibilidade de fazer a instalação rápida e prática com o MedTaskInstaller, bastando apenas baixar o arquivo .zip presente neste repositório e extrai-lo no seu pc. Em seguida, dentro do instalador, apenas necessitarás de passar por alguns passos simples que demorarão segundos para, em seguida, poder utilizar o MedTask normalmente. 
 
 ### Como utilizar o MedTask?
 
@@ -70,3 +70,5 @@ Ao ir na aba "Estatísticas", podemos verificar algumas estatísticas dos médic
 Na aba "Histórico", temos a opção de verificar o histórico de pacientes de cada médico, em uma tabela de registro de todos àqueles que já passaram por seus atendimentos. 
 
 ![histórico](figuras/12.PNG)
+
+Bom atendimento!
