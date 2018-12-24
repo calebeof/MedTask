@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AtenderWindow</class>
+ <widget class="QDialog" name="AtenderWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>629</width>
+    <height>430</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Atender Paciente</string>
+  </property>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>30</y>
+     <width>291</width>
+     <height>311</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTableWidget" name="tbl_paciente">
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <column>
+       <property name="text">
+        <string>Nome</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Prioridade</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Patologia</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string/>
+       </property>
+      </column>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="verticalLayoutWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>30</y>
+     <width>281</width>
+     <height>311</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QTableWidget" name="tbl_medico">
+      <property name="editTriggers">
+       <set>QAbstractItemView::NoEditTriggers</set>
+      </property>
+      <column>
+       <property name="text">
+        <string>Médico</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Especialização</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QLabel" name="lb_medico">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>360</y>
+     <width>141</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Nenhum médico selecionado</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lb_paciente">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>360</y>
+     <width>141</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Nenhum paciente selecionado</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="bt_atender">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>390</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Atender</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

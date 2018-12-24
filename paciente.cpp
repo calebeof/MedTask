@@ -1,5 +1,20 @@
 #include "paciente.h"
 
+QString Paciente::getPatologia() const
+{
+    return patologia;
+}
+
+void Paciente::setPatologia(QString &value)
+{
+    value[0] = value[0].toUpper();
+    for(int i=1; i<value.size(); i++){
+        if(value[i].isUpper())
+            value[i] = value[i].toLower();
+    }
+    patologia = value;
+}
+
 Paciente::Paciente()
 {
 

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DisponibilizarWindow</class>
+ <widget class="QDialog" name="DisponibilizarWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>537</width>
+    <height>355</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>79</x>
+     <y>50</y>
+     <width>331</width>
+     <height>291</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item alignment="Qt::AlignHCenter">
+     <widget class="QLabel" name="lb_medicos">
+      <property name="text">
+       <string>Médicos indisponíveis no momento</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QTableWidget" name="tbl_medicos">
+      <column>
+       <property name="text">
+        <string>Nome</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Especialização</string>
+       </property>
+      </column>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

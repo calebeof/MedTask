@@ -11,6 +11,7 @@ class Paciente
 private:
     QString nome;
     int prioridade;
+    QString patologia;
     //prioridade 0 -> baixa
     //prioridade 1 -> média
     //prioridade 2 -> alta
@@ -25,6 +26,8 @@ public:
     int getPrioridade() const;
     void setPrioridade(int value);
 
+    QString getPatologia() const;
+    void setPatologia(QString &value);
 signals:
 
 public slots:

@@ -17,6 +17,7 @@ TEMPLATE = app
 # depend on your compiler). Please consult the documentation of the
 # deprecated API in order to know how to port your code away from it.
 DEFINES += QT_DEPRECATED_WARNINGS
+win32:RC_ICONS += favicon.ico
 
 # You can also make your code fail to compile if you use deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -29,15 +30,23 @@ SOURCES += \
         mainwindow.cpp \
     paciente.cpp \
     medico.cpp \
-    atender.cpp \
-    medicos.cpp
+    medicos.cpp \
+    gerenciadordearquivos.cpp \
+    pacientes.cpp \
+    atenderwindow.cpp \
+    disponibilizarwindow.cpp
 
 HEADERS += \
         mainwindow.h \
     paciente.h \
     medico.h \
-    atender.h \
-    medicos.h
+    medicos.h \
+    gerenciadordearquivos.h \
+    pacientes.h \
+    atenderwindow.h \
+    disponibilizarwindow.h
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+    atenderwindow.ui \
+    disponibilizarwindow.ui

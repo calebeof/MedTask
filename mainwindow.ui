@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>487</width>
-    <height>464</height>
+    <width>746</width>
+    <height>629</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,14 +17,14 @@
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>0</x>
       <y>0</y>
-      <width>451</width>
-      <height>411</height>
+      <width>711</width>
+      <height>571</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="Inserir">
      <attribute name="title">
@@ -92,6 +92,58 @@
        </widget>
       </item>
       <item>
+       <widget class="QWidget" name="layout_esp_2" native="true">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <layout class="QHBoxLayout" name="layout_esp">
+         <item>
+          <widget class="QLabel" name="lb_esp">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string>Especialização</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="le_esp">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="layout_pat" native="true">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <layout class="QHBoxLayout" name="layout_esp_10">
+         <item>
+          <widget class="QLabel" name="lb_pat">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="text">
+            <string>Patologia</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="le_pat">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
        <widget class="QPushButton" name="btn_insert">
         <property name="text">
          <string>Inserir</string>
@@ -99,37 +151,82 @@
        </widget>
       </item>
       <item>
-       <widget class="QTableWidget" name="tbl_data">
-        <property name="editTriggers">
-         <set>QAbstractItemView::NoEditTriggers</set>
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>                                  Pacientes em espera                                                                                          Médicos disponíveis</string>
         </property>
-        <attribute name="horizontalHeaderDefaultSectionSize">
-         <number>100</number>
-        </attribute>
-        <attribute name="horizontalHeaderStretchLastSection">
-         <bool>true</bool>
-        </attribute>
-        <attribute name="verticalHeaderShowSortIndicator" stdset="0">
-         <bool>true</bool>
-        </attribute>
-        <attribute name="verticalHeaderStretchLastSection">
-         <bool>false</bool>
-        </attribute>
-        <column>
-         <property name="text">
-          <string>Nome</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Prioridade</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>Tipo</string>
-         </property>
-        </column>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_6">
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QTableWidget" name="tbl_paciente">
+          <property name="editTriggers">
+           <set>QAbstractItemView::NoEditTriggers</set>
+          </property>
+          <column>
+           <property name="text">
+            <string>Nome</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Prioridade</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Patologia</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="tbl_medico">
+          <property name="editTriggers">
+           <set>QAbstractItemView::NoEditTriggers</set>
+          </property>
+          <attribute name="horizontalHeaderDefaultSectionSize">
+           <number>100</number>
+          </attribute>
+          <attribute name="horizontalHeaderStretchLastSection">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="verticalHeaderStretchLastSection">
+           <bool>false</bool>
+          </attribute>
+          <column>
+           <property name="text">
+            <string>Nome</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>Especialização</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QPushButton" name="bt_atender">
+        <property name="text">
+         <string>Atender Paciente</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="bt_disponibilizar">
+        <property name="text">
+         <string>Disponibilizar Médico</string>
+        </property>
        </widget>
       </item>
       <item>
@@ -150,6 +247,13 @@
         </item>
        </layout>
       </item>
+      <item>
+       <widget class="QPushButton" name="clearButton">
+        <property name="text">
+         <string>Limpar</string>
+        </property>
+       </widget>
+      </item>
      </layout>
     </widget>
     <widget class="QWidget" name="tab">
@@ -159,22 +263,22 @@
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>30</y>
-        <width>341</width>
-        <height>301</height>
+        <x>50</x>
+        <y>100</y>
+        <width>611</width>
+        <height>291</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_2">
        <item>
         <widget class="QGroupBox" name="gb_avg">
          <property name="title">
-          <string>Média da turma</string>
+          <string>Média de pacientes atendidos por médico:</string>
          </property>
          <widget class="QLabel" name="lbl_avg">
           <property name="geometry">
            <rect>
-            <x>6</x>
+            <x>150</x>
             <y>20</y>
             <width>331</width>
             <height>71</height>
@@ -197,13 +301,13 @@
        <item>
         <widget class="QGroupBox" name="gb_highest">
          <property name="title">
-          <string>Maior média</string>
+          <string>Médico com maior quantidade de pacientes: </string>
          </property>
          <widget class="QLabel" name="lbl_highest">
           <property name="geometry">
            <rect>
-            <x>0</x>
-            <y>20</y>
+            <x>140</x>
+            <y>10</y>
             <width>341</width>
             <height>71</height>
            </rect>
@@ -225,13 +329,13 @@
        <item>
         <widget class="QGroupBox" name="gb_lowest">
          <property name="title">
-          <string>Menor média</string>
+          <string>Médico com menor quantidade de pacientes: </string>
          </property>
          <widget class="QLabel" name="lbl_lowest">
           <property name="geometry">
            <rect>
-            <x>-4</x>
-            <y>20</y>
+            <x>130</x>
+            <y>10</y>
             <width>341</width>
             <height>71</height>
            </rect>
@@ -255,42 +359,69 @@
     </widget>
     <widget class="QWidget" name="tab_2">
      <attribute name="title">
-      <string>Page</string>
+      <string>Histórico</string>
      </attribute>
      <widget class="QWidget" name="horizontalLayoutWidget">
       <property name="geometry">
        <rect>
-        <x>9</x>
-        <y>70</y>
-        <width>191</width>
-        <height>311</height>
+        <x>20</x>
+        <y>140</y>
+        <width>301</width>
+        <height>301</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_2">
        <item>
-        <widget class="QTableWidget" name="tableWidget"/>
+        <widget class="QTableWidget" name="tableWidget">
+         <column>
+          <property name="text">
+           <string>Nome</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Prioridade</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Patologia</string>
+          </property>
+         </column>
+        </widget>
        </item>
       </layout>
      </widget>
      <widget class="QWidget" name="horizontalLayoutWidget_2">
       <property name="geometry">
        <rect>
-        <x>240</x>
-        <y>70</y>
-        <width>201</width>
-        <height>311</height>
+        <x>410</x>
+        <y>140</y>
+        <width>241</width>
+        <height>301</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_4">
        <item>
-        <widget class="QTableWidget" name="tableWidget_2"/>
+        <widget class="QTableWidget" name="tableWidget_2">
+         <column>
+          <property name="text">
+           <string>Nome</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Especialização</string>
+          </property>
+         </column>
+        </widget>
        </item>
       </layout>
      </widget>
      <widget class="QComboBox" name="comboMed">
       <property name="geometry">
        <rect>
-        <x>18</x>
+        <x>70</x>
         <y>40</y>
         <width>181</width>
         <height>21</height>
@@ -305,7 +436,7 @@
      <widget class="QComboBox" name="comboPac">
       <property name="geometry">
        <rect>
-        <x>238</x>
+        <x>430</x>
         <y>40</y>
         <width>201</width>
         <height>21</height>
@@ -320,7 +451,7 @@
      <widget class="QLabel" name="label_2">
       <property name="geometry">
        <rect>
-        <x>80</x>
+        <x>150</x>
         <y>20</y>
         <width>47</width>
         <height>13</height>
@@ -333,7 +464,7 @@
      <widget class="QLabel" name="label_3">
       <property name="geometry">
        <rect>
-        <x>310</x>
+        <x>510</x>
         <y>20</y>
         <width>47</width>
         <height>16</height>
@@ -351,7 +482,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>487</width>
+     <width>746</width>
      <height>21</height>
     </rect>
    </property>
@@ -391,6 +522,19 @@
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>btn_NameSort</tabstop>
+  <tabstop>le_nameInput</tabstop>
+  <tabstop>selection_bar</tabstop>
+  <tabstop>tbl_medico</tabstop>
+  <tabstop>btn_GradeSort</tabstop>
+  <tabstop>btn_insert</tabstop>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>comboMed</tabstop>
+  <tabstop>comboPac</tabstop>
+  <tabstop>clearButton</tabstop>
+  <tabstop>selection_bar2</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

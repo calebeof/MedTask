@@ -1,5 +1,7 @@
 #include "medico.h"
 
+
+
 QString Medico::getNome() const
 {
     return nome;
@@ -8,6 +10,22 @@ QString Medico::getNome() const
 void Medico::setNome(const QString &value)
 {
     nome = value;
+}
+
+
+QString Medico::getEspecialidade() const
+{
+    return especialidade;
+}
+
+void Medico::setEspecialidade(QString &value)
+{
+    value[0] = value[0].toUpper();
+    for(int i=1; i<value.size(); i++){
+        if(value[i].isUpper())
+            value[i] = value[i].toLower();
+    }
+    especialidade = value;
 }
 
 
@@ -38,7 +56,17 @@ int Medico::size()
     return atendidos.size();
 }
 
+void Medico::inserirPacienteAtendido(Paciente a)
+{
+    atendidos.push_back(a);
+}
+
 Paciente Medico::operator[](int i)
 {
     return atendidos[i];
+}
+
+QVector<Paciente> Medico::getAtendidos()
+{
+    return atendidos;
 }
