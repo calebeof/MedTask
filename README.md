@@ -5,6 +5,10 @@
 
 O MedTask tem a intenção de tornar a realização de tarefas de agendamento mais prática e fácil em hospitais. 
 
+#### Como adquirir o MedTask?
+
+Se utilizas Linux ou Mac, basta fazer o download do repositório e executar o arquivo MedTask.pro com o QT Creator. Já para Windows, há a possibilidade de fazer a instalação rápida e prática com o MedTaskInstaller, bastando apenas baixar o arquivo .zip presente neste repositório e extrai-lo no seu pc. Em seguida, apenas necessitarás de passar por alguns passos simples que demorarão segundos para, em seguida, poder utilizar o MedTask normalmente. 
+
 ![tela inicial](figuras/01.PNG)
 
 Como tela inicial, pode-se cadastrar dois tipos de usuários: pacientes e médicos. Para os pacientes, há a possibilidade de determinar seu nome, sua prioridade de atendimento (em alta, média ou baixa), além de sua patologia. Já para os médicos, pode-se cadastrar seu nome e sua especialização. 
