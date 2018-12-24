@@ -320,7 +320,7 @@ void MainWindow::on_comboMed_activated(const QString &arg1)
 
 void MainWindow::on_bt_ajuda_clicked()
 {
-    QUrl link = QUrl("https://github.com/andressatheotonio/FilmListQT/blob/master/README.md");
+    QUrl link = QUrl("https://github.com/calebeof/MedTask/blob/master/README.md");
 
     QDesktopServices::openUrl(link);
 }
