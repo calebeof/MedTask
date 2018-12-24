@@ -1,5 +1,0 @@
-Calebe,Medico
-Dr Valdomiro,Medico
-Eita,Paciente,1
-Oloko,Paciente,0
-Velho,Paciente,2
