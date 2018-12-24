@@ -25,6 +25,11 @@
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
      <widget class="QTableWidget" name="tbl_paciente">
+      <property name="font">
+       <font>
+        <family>Ubuntu</family>
+       </font>
+      </property>
       <property name="editTriggers">
        <set>QAbstractItemView::NoEditTriggers</set>
       </property>
@@ -64,6 +69,11 @@
    <layout class="QVBoxLayout" name="verticalLayout_2">
     <item>
      <widget class="QTableWidget" name="tbl_medico">
+      <property name="font">
+       <font>
+        <family>Ubuntu</family>
+       </font>
+      </property>
       <property name="editTriggers">
        <set>QAbstractItemView::NoEditTriggers</set>
       </property>
@@ -84,11 +94,17 @@
   <widget class="QLabel" name="lb_medico">
    <property name="geometry">
     <rect>
-     <x>380</x>
+     <x>320</x>
      <y>360</y>
-     <width>141</width>
-     <height>21</height>
+     <width>281</width>
+     <height>20</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Ubuntu</family>
+     <pointsize>10</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>Nenhum médico selecionado</string>
@@ -97,11 +113,17 @@
   <widget class="QLabel" name="lb_paciente">
    <property name="geometry">
     <rect>
-     <x>80</x>
+     <x>20</x>
      <y>360</y>
-     <width>141</width>
-     <height>21</height>
+     <width>291</width>
+     <height>20</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Ubuntu</family>
+     <pointsize>10</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>Nenhum paciente selecionado</string>
@@ -115,6 +137,12 @@
      <width>75</width>
      <height>23</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Ubuntu</family>
+     <pointsize>12</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>Atender</string>

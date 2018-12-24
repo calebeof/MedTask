@@ -26,7 +26,6 @@ void MainWindow::atualizarEstatisticas()
     ui->lbl_avg->setText(QString::number(media,'f',2));
     ui->lbl_highest->setText(aux_mais.getNome()+" (" + QString::number(aux_mais.getAtendidos().size(),'f',2)+")");
     ui->lbl_lowest->setText(aux_menos.getNome()+" ("+QString::number(aux_menos.getAtendidos().size(),'f',2)+")");
-
 }
 
 void MainWindow::inserirPacienteNaTabela(Paciente paciente, int row, int op)
@@ -75,7 +74,7 @@ void MainWindow::carregar()
             int qnt_row = ui->tbl_paciente->rowCount();
             ui->tbl_paciente->insertRow(qnt_row);
             inserirPacienteNaTabela(lista_de_pacientes[i], qnt_row++, 0);
-            ui->comboPac->addItem(lista_de_pacientes[i].getNome());
+            //ui->comboPac->addItem(lista_de_pacientes[i].getNome());
         }
     }else
         QMessageBox::information(this, "Carregar dados","Não foi possível carregar os dados, tente novamente.");
@@ -104,6 +103,7 @@ void MainWindow::on_btn_insert_clicked()
             qDebug() << "Paciente selecionado!" << endl;
             Paciente paciente;
             paciente.setNome(aux_nome);
+            paciente.setPatologia(aux_patologia);
             int qnt_row = ui->tbl_paciente->rowCount();
             if(aux_prioridade=="Selecione a prioridade..."){
                 QMessageBox::warning(this, tr("AVISO"), tr("Insira a prioridade do paciente."));
@@ -113,7 +113,10 @@ void MainWindow::on_btn_insert_clicked()
                 QMessageBox::warning(this, tr("AVISO"), tr("Insira a patologia do paciente."));
                 return;
             }
-            paciente.setPatologia(aux_patologia);
+            if(lista_de_pacientes.find(paciente.getNome(), paciente.getPatologia())!=-1){
+                QMessageBox::warning(this, tr("AVISO"), tr("Paciente já se encontra na lista de espera."));
+                return;
+            }
             if(aux_prioridade=="Prioridade alta")
                 paciente.setPrioridade(0);
             else if (aux_prioridade=="Prioridade média")
@@ -123,7 +126,7 @@ void MainWindow::on_btn_insert_clicked()
             ui->tbl_paciente->insertRow(qnt_row);
             ui->le_nameInput->clear();
             lista_de_pacientes.inserirPaciente(paciente);
-            ui->comboPac->addItem(paciente.getNome());
+            //ui->comboPac->addItem(paciente.getNome());
             ui->le_pat->clear();
             inserirPacienteNaTabela(paciente, qnt_row, 0);
         }
@@ -138,6 +141,10 @@ void MainWindow::on_btn_insert_clicked()
             }
             medico.setNome(aux_nome);
             medico.setEspecialidade(aux_esp);
+            if(lista_de_medicos.find(aux_nome, aux_esp)!=-1){
+                QMessageBox::warning(this, tr("AVISO"), tr("Médico já se encontra cadastrado."));
+                return;
+            }
             lista_de_medicos.inserirMedico(medico);
             ui->tbl_medico->insertRow(qnt_row);
             ui->le_nameInput->clear();
@@ -310,3 +317,10 @@ void MainWindow::on_comboMed_activated(const QString &arg1)
     }
 }
 
+
+void MainWindow::on_bt_ajuda_clicked()
+{
+    QUrl link = QUrl("https://github.com/andressatheotonio/FilmListQT/blob/master/README.md");
+
+    QDesktopServices::openUrl(link);
+}

@@ -1,4 +1,5 @@
 #include "medicos.h"
+#include "paciente.h"
 #include <algorithm>
 using namespace std;
 
@@ -109,6 +110,19 @@ void Medicos::editarEspecialidade(int index, QString value)
 int Medicos::find(QString nome){
     for(int i=0; i<lista.size(); i++){
         if(lista[i].getNome()==nome)
+            return i;
+    }
+    return -1;
+}
+
+int Medicos::find(QString nome, QString especialidade)
+{
+    for(int i=0; i<lista.size(); i++){
+        if(lista[i].getNome() == nome && lista[i].getEspecialidade() == especialidade)
+            return i;
+    }
+    for(int i=0; i<indisponiveis.size(); i++){
+        if(indisponiveis[i].getNome() == nome && indisponiveis[i].getEspecialidade() == especialidade)
             return i;
     }
     return -1;

@@ -1,5 +1,4 @@
 Calebe,Medico,Cardiologia
-Oloko,Medico,Risadas
-Beibe,Paciente,1,Do Biruleibe
-Txobe Txobe,Paciente,2,Do Biruxobe
-Bilu Bilu,Paciente,0,Bilu Bilu
+Fulano,Paciente,0,InsuficiênciaCardíaca
+Beltrano,Paciente,1,Dengue
+Sicrano,Medico,Geral 

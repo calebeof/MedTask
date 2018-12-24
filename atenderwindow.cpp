@@ -111,6 +111,7 @@ void AtenderWindow::on_bt_atender_clicked()
     medico_selecionado.inserirPacienteAtendido(getPaciente_selecionado());
     lista_de_medicos_importados.inserirMedicoIndisponivel(getMedico_selecionado());
     lista_de_medicos_importados.erase(index_med);
+    lista_de_pacientes_importados.inserirPacienteAtendido(lista_de_pacientes_importados[index_pac]);
     lista_de_pacientes_importados.erase(index_pac);
     QMessageBox::information(this, tr("SUCESSO"), tr("Paciente sendo atendido!"));
     this->close();

@@ -9,6 +9,11 @@ void Pacientes::inserirPaciente(Paciente a){
     lista.push_back(a);
 }
 
+void Pacientes::inserirPacienteAtendido(Paciente a)
+{
+    atendidos.push_back(a);
+}
+
 void Pacientes::ordenarPorPrioridade(){
     ordenarPorNome();
     std::stable_sort(lista.begin(),lista.end(),[](Paciente a, Paciente b){return a.getPrioridade()<b.getPrioridade();});
@@ -31,6 +36,13 @@ int Pacientes::find(QString nome)
 {
     for(int i=0; i<lista.size(); i++)
         if(lista[i].getNome() == nome)
+            return i;
+    return -1;
+}
+
+int Pacientes::find(QString nome, QString patologia){
+    for(int i=0; i<lista.size(); i++)
+        if(lista[i].getNome() == nome && lista[i].getPatologia() == patologia)
             return i;
     return -1;
 }

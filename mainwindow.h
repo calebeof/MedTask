@@ -4,9 +4,12 @@
 #include <QMainWindow>
 #include <QDebug>
 #include <QVector>
-#include<QFileDialog>
+#include <QFileDialog>
 #include <QInputDialog>
 #include <QComboBox>
+#include <QDesktopServices>
+#include <numeric>
+
 #include "paciente.h"
 #include "medico.h"
 #include "pacientes.h"
@@ -57,6 +60,8 @@ private slots:
     void on_bt_atender_clicked();
 
     void on_bt_disponibilizar_clicked();
+
+    void on_bt_ajuda_clicked();
 
 private:
     Ui::MainWindow *ui;

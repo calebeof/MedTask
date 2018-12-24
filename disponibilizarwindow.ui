@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Disponibilizar Médico</string>
   </property>
   <widget class="QWidget" name="verticalLayoutWidget">
    <property name="geometry">
@@ -25,6 +25,12 @@
    <layout class="QVBoxLayout" name="verticalLayout">
     <item alignment="Qt::AlignHCenter">
      <widget class="QLabel" name="lb_medicos">
+      <property name="font">
+       <font>
+        <family>Ubuntu</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
       <property name="text">
        <string>Médicos indisponíveis no momento</string>
       </property>
@@ -32,6 +38,11 @@
     </item>
     <item>
      <widget class="QTableWidget" name="tbl_medicos">
+      <property name="font">
+       <font>
+        <family>Ubuntu</family>
+       </font>
+      </property>
       <column>
        <property name="text">
         <string>Nome</string>

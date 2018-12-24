@@ -1,8 +1,10 @@
 #ifndef MEDICOS_H
 #define MEDICOS_H
 
-#include "medico.h"
 #include <QVector>
+#include <QString>
+
+#include "medico.h"
 
 class Medicos
 {
@@ -20,6 +22,7 @@ public:
     int size();
     void clear();
     int find(QString nome);
+    int find(QString nome, QString especialidade);
     Medico findMedicoIndisponivel(QString nome);
     void erase(int index);
     void eraseMedicoIndisponivel(int index);

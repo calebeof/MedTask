@@ -2,10 +2,10 @@
 #define ATENDERWINDOW_H
 
 #include <QDialog>
+#include <QMessageBox>
+
 #include "medicos.h"
 #include "pacientes.h"
-
-#include <QMessageBox>
 
 namespace Ui {
 class AtenderWindow;

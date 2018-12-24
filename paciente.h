@@ -2,9 +2,8 @@
 #define PACIENTE_H
 
 #include <QObject>
-
-#define MEDIA 70
-
+#include <QVector>
+#include <QString>
 class Paciente
 {
 
@@ -25,6 +24,9 @@ public:
 
     int getPrioridade() const;
     void setPrioridade(int value);
+
+    //void inserirMedicoAtendido(Medico a);
+    //QVector <Medico> getFoiAtendido();
 
     QString getPatologia() const;
     void setPatologia(QString &value);

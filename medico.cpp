@@ -1,5 +1,5 @@
 #include "medico.h"
-
+#include "paciente.h"
 
 
 QString Medico::getNome() const

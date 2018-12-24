@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>746</width>
-    <height>629</height>
+    <width>796</width>
+    <height>672</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,14 +17,20 @@
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>711</width>
-      <height>571</height>
+      <x>20</x>
+      <y>10</y>
+      <width>771</width>
+      <height>621</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Ubuntu</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="Inserir">
      <attribute name="title">
@@ -35,6 +41,12 @@
        <layout class="QHBoxLayout" name="horizontalLayout">
         <item>
          <widget class="QLabel" name="label">
+          <property name="font">
+           <font>
+            <family>Ubuntu</family>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>Nome</string>
           </property>
@@ -47,6 +59,12 @@
       </item>
       <item alignment="Qt::AlignTop">
        <widget class="QComboBox" name="selection_bar">
+        <property name="font">
+         <font>
+          <family>Ubuntu</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
         <item>
          <property name="text">
           <string>Selecionar tipo...</string>
@@ -68,6 +86,12 @@
        <widget class="QComboBox" name="selection_bar2">
         <property name="enabled">
          <bool>false</bool>
+        </property>
+        <property name="font">
+         <font>
+          <family>Ubuntu</family>
+          <pointsize>10</pointsize>
+         </font>
         </property>
         <item>
          <property name="text">
@@ -102,6 +126,12 @@
            <property name="enabled">
             <bool>false</bool>
            </property>
+           <property name="font">
+            <font>
+             <family>Ubuntu</family>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
            <property name="text">
             <string>Especialização</string>
            </property>
@@ -128,6 +158,12 @@
            <property name="enabled">
             <bool>true</bool>
            </property>
+           <property name="font">
+            <font>
+             <family>Ubuntu</family>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
            <property name="text">
             <string>Patologia</string>
            </property>
@@ -145,6 +181,12 @@
       </item>
       <item>
        <widget class="QPushButton" name="btn_insert">
+        <property name="font">
+         <font>
+          <family>Ubuntu</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
         <property name="text">
          <string>Inserir</string>
         </property>
@@ -152,8 +194,14 @@
       </item>
       <item>
        <widget class="QLabel" name="label_4">
+        <property name="font">
+         <font>
+          <family>Ubuntu</family>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
         <property name="text">
-         <string>                                  Pacientes em espera                                                                                          Médicos disponíveis</string>
+         <string>                                  Pacientes em espera                                                                                     Médicos disponíveis</string>
         </property>
        </widget>
       </item>
@@ -164,6 +212,11 @@
         </property>
         <item>
          <widget class="QTableWidget" name="tbl_paciente">
+          <property name="font">
+           <font>
+            <family>Ubuntu</family>
+           </font>
+          </property>
           <property name="editTriggers">
            <set>QAbstractItemView::NoEditTriggers</set>
           </property>
@@ -186,6 +239,11 @@
         </item>
         <item>
          <widget class="QTableWidget" name="tbl_medico">
+          <property name="font">
+           <font>
+            <family>Ubuntu</family>
+           </font>
+          </property>
           <property name="editTriggers">
            <set>QAbstractItemView::NoEditTriggers</set>
           </property>
@@ -217,6 +275,12 @@
       </item>
       <item>
        <widget class="QPushButton" name="bt_atender">
+        <property name="font">
+         <font>
+          <family>Ubuntu</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
         <property name="text">
          <string>Atender Paciente</string>
         </property>
@@ -224,6 +288,12 @@
       </item>
       <item>
        <widget class="QPushButton" name="bt_disponibilizar">
+        <property name="font">
+         <font>
+          <family>Ubuntu</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
         <property name="text">
          <string>Disponibilizar Médico</string>
         </property>
@@ -233,6 +303,12 @@
        <layout class="QHBoxLayout" name="horizontalLayout_3">
         <item>
          <widget class="QPushButton" name="btn_NameSort">
+          <property name="font">
+           <font>
+            <family>Ubuntu</family>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>Ordenar por Nome</string>
           </property>
@@ -240,6 +316,12 @@
         </item>
         <item>
          <widget class="QPushButton" name="btn_GradeSort">
+          <property name="font">
+           <font>
+            <family>Ubuntu</family>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="text">
            <string>Ordenar por Prioridade</string>
           </property>
@@ -249,8 +331,27 @@
       </item>
       <item>
        <widget class="QPushButton" name="clearButton">
+        <property name="font">
+         <font>
+          <family>Ubuntu</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
         <property name="text">
          <string>Limpar</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="bt_ajuda">
+        <property name="font">
+         <font>
+          <family>Ubuntu</family>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Ajuda</string>
         </property>
        </widget>
       </item>
@@ -272,6 +373,12 @@
       <layout class="QVBoxLayout" name="verticalLayout_2">
        <item>
         <widget class="QGroupBox" name="gb_avg">
+         <property name="font">
+          <font>
+           <family>Ubuntu</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <property name="title">
           <string>Média de pacientes atendidos por médico:</string>
          </property>
@@ -300,6 +407,12 @@
        </item>
        <item>
         <widget class="QGroupBox" name="gb_highest">
+         <property name="font">
+          <font>
+           <family>Ubuntu</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <property name="title">
           <string>Médico com maior quantidade de pacientes: </string>
          </property>
@@ -328,6 +441,12 @@
        </item>
        <item>
         <widget class="QGroupBox" name="gb_lowest">
+         <property name="font">
+          <font>
+           <family>Ubuntu</family>
+           <pointsize>12</pointsize>
+          </font>
+         </property>
          <property name="title">
           <string>Médico com menor quantidade de pacientes: </string>
          </property>
@@ -364,15 +483,20 @@
      <widget class="QWidget" name="horizontalLayoutWidget">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>140</y>
-        <width>301</width>
-        <height>301</height>
+        <x>180</x>
+        <y>130</y>
+        <width>311</width>
+        <height>361</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_2">
        <item>
         <widget class="QTableWidget" name="tableWidget">
+         <property name="font">
+          <font>
+           <family>Ubuntu</family>
+          </font>
+         </property>
          <column>
           <property name="text">
            <string>Nome</string>
@@ -392,40 +516,20 @@
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="horizontalLayoutWidget_2">
-      <property name="geometry">
-       <rect>
-        <x>410</x>
-        <y>140</y>
-        <width>241</width>
-        <height>301</height>
-       </rect>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_4">
-       <item>
-        <widget class="QTableWidget" name="tableWidget_2">
-         <column>
-          <property name="text">
-           <string>Nome</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>Especialização</string>
-          </property>
-         </column>
-        </widget>
-       </item>
-      </layout>
-     </widget>
      <widget class="QComboBox" name="comboMed">
       <property name="geometry">
        <rect>
-        <x>70</x>
-        <y>40</y>
-        <width>181</width>
+        <x>230</x>
+        <y>90</y>
+        <width>231</width>
         <height>21</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Ubuntu</family>
+        <pointsize>12</pointsize>
+       </font>
       </property>
       <item>
        <property name="text">
@@ -433,45 +537,23 @@
        </property>
       </item>
      </widget>
-     <widget class="QComboBox" name="comboPac">
-      <property name="geometry">
-       <rect>
-        <x>430</x>
-        <y>40</y>
-        <width>201</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <item>
-       <property name="text">
-        <string>Selecione um paciente...</string>
-       </property>
-      </item>
-     </widget>
      <widget class="QLabel" name="label_2">
       <property name="geometry">
        <rect>
-        <x>150</x>
-        <y>20</y>
-        <width>47</width>
-        <height>13</height>
+        <x>240</x>
+        <y>60</y>
+        <width>231</width>
+        <height>21</height>
        </rect>
       </property>
-      <property name="text">
-       <string>Médico</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_3">
-      <property name="geometry">
-       <rect>
-        <x>510</x>
-        <y>20</y>
-        <width>47</width>
-        <height>16</height>
-       </rect>
+      <property name="font">
+       <font>
+        <family>Ubuntu</family>
+        <pointsize>16</pointsize>
+       </font>
       </property>
       <property name="text">
-       <string>Paciente</string>
+       <string>Histórico do Médico</string>
       </property>
      </widget>
     </widget>
@@ -482,7 +564,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>746</width>
+     <width>796</width>
      <height>21</height>
     </rect>
    </property>
@@ -531,7 +613,6 @@
   <tabstop>btn_insert</tabstop>
   <tabstop>tabWidget</tabstop>
   <tabstop>comboMed</tabstop>
-  <tabstop>comboPac</tabstop>
   <tabstop>clearButton</tabstop>
   <tabstop>selection_bar2</tabstop>
  </tabstops>

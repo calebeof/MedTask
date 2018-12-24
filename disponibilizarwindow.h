@@ -2,6 +2,7 @@
 #define DISPONIBILIZARWINDOW_H
 
 #include <QDialog>
+
 #include "medicos.h"
 
 namespace Ui {
