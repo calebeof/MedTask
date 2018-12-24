@@ -5,10 +5,13 @@
 
 O MedTask tem a intenção de tornar a realização de tarefas de agendamento mais prática e fácil em hospitais. 
 
-#### Como adquirir o MedTask?
+### Como adquirir o MedTask?
 
 Se utilizas Linux ou Mac, basta fazer o download do repositório e executar o arquivo MedTask.pro com o QT Creator. Já para Windows, há a possibilidade de fazer a instalação rápida e prática com o MedTaskInstaller, bastando apenas baixar o arquivo .zip presente neste repositório e extrai-lo no seu pc. Em seguida, apenas necessitarás de passar por alguns passos simples que demorarão segundos para, em seguida, poder utilizar o MedTask normalmente. 
 
+### Como utilizar o MedTask?
+
+#### Cadastro de usuários
 ![tela inicial](figuras/01.PNG)
 
 Como tela inicial, pode-se cadastrar dois tipos de usuários: pacientes e médicos. Para os pacientes, há a possibilidade de determinar seu nome, sua prioridade de atendimento (em alta, média ou baixa), além de sua patologia. Já para os médicos, pode-se cadastrar seu nome e sua especialização. 
@@ -21,12 +24,14 @@ Para inserir o usuário, basta clicar uma vez no botão "Inserir".
 
 Uma outra alternativa é carregar os dados de pacientes e médicos a partir de um arquivo do tipo .txt, como também salvá-los. Para carregar, basta apertar a tecla B ou ir na barra superior e localizar Arquivos -> Carregar. Para salvar, basta apertar as teclas Ctrl+S ou localizar Arquivos -> Salvar. Em ambos os casos, aparecerá uma janela para abrir ou criar o arquivo.
 
+#### Opções adicionais
 ![outras opções](figuras/04.PNG)
 
 Além disso, as opções Ordenar por Nome e Ordenar por Prioridade possibilitam configurar as tabelas para a ordem crescente de nome e decrescente de prioridade (esta disponível apenas para usuários do tipo paciente). 
 
 A opção Limpar permite a varredura instantânea dos usuários e, consequentemente, de seus dados.
 
+#### Opções de atendimento
 ![atendimento](figuras/05.PNG)
 
 Para atender a um paciente, basta clicar na opção Atender. Em seguida, será aberta uma janela de atendimento, no qual será fornecida duas tabelas. A primeira tabela será de pacientes na lista de espera, e a segunda será de médicos disponíveis para consulta. Ao clicar duas vezes em um paciente da primeira tabela e também duas vezes em um paciente na segunda tabela, você poderá realizar o cadastro do atendimento, ao clicar no botão Atender logo em seguida. 
@@ -44,19 +49,21 @@ Ao clicar em Disponibilizar Médico, será aberta uma janela com a lista de méd
 
 Às vezes há momentos que os cadastros podem ser feitos de maneira incorreta, como algum atributo do usuário ter sido escrito errado pelo cadastrador. Estes problemas podem ser resolvidos com a opção de editar o usuário, clicando duas vezes no aspecto a ser editado, ainda na tabela.
 
+#### Edição de dados
+
 ![editar nome](figuras/13.PNG)
 
 Esta opção pode ser com os dois tipos de usuários presentes no programa.
 
 ![editar_nome](figuras/14.PNG)
 
-### Estatísticas
+#### Estatísticas
 
 Ao ir na aba "Estatísticas", podemos verificar algumas estatísticas dos médicos. 
 
 ![estatísticas](figuras/10.PNG)
 
-### Histórico
+#### Histórico
 
 ![histórico](figuras/11.PNG)
 
